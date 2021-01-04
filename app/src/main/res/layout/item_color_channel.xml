@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<app.rootstock.views.ChannelPickImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/color_item"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:adjustViewBounds="true"
+    android:background="?attr/selectableItemBackgroundBorderless"
+    android:clickable="true"
+    android:contentDescription="@null"
+    android:focusable="true"
+    android:scaleType="fitCenter"
+    android:src="@drawable/circle_channel">
+</app.rootstock.views.ChannelPickImageView>

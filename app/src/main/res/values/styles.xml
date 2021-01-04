@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Text.TextInputLayout.Base" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
+        <item name="android:layout_marginStart">32dp</item>
+        <item name="android:layout_marginEnd">132dp</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="errorEnabled">true</item>
+        <item name="editTextStyle">@style/Text.EditText.Base</item>
+    </style>
+
+    <style name="Text.TextInputLayout.Primary" parent="Text.TextInputLayout.Base">
+        <item name="android:textColorHint">@color/text_additional</item>
+    </style>
+
+    <style name="Text.EditText.Base" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+    <style name="AlertDialogMaterialTheme" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="buttonBarPositiveButtonStyle">@style/AppMaterialButton.Base</item>
+        <item name="buttonBarNegativeButtonStyle">@style/AppMaterialButton.Base</item>
+    </style>
+
+    <style name="AppMaterialButton.Base" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/color_state_button</item>
+        <item name="android:layout_marginStart">32dp</item>
+        <item name="android:layout_marginEnd">32dp</item>
+        <item name="android:textAppearance">@style/AppMaterialButton.Text.Base</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">@dimen/workspace_radius</item>
+    </style>
+
+    <style name="AppMaterialButton.WhiteBackground" parent="AppMaterialButton.Base">
+        <item name="backgroundTint">@color/color_state_button_white</item>
+        <item name="android:textColor">@color/primary</item>
+
+    </style>
+
+    <style name="AppMaterialButton.Text.Base" parent="">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">21sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="Text.Info.Bold" parent="TextBase">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/text_additional</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Text.Usual" parent="TextBase">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Text.Workspaces.NoWorkspace" parent="TextBase">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/text_additional</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text.Usual.Settings" parent="">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextBase" parent="">
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="Text.Title" parent="TextBase">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Text.Item.Workspace" parent="TextBase">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Text.Item.Message.Content" parent="TextBase">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Text.Item.Message.Date" parent="TextBase">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/cardview_message_date</item>
+    </style>
+
+    <style name="ProgressBar.Base" parent="Widget.AppCompat.ProgressBar">
+        <item name="android:indeterminateTint">@color/white</item>
+        <item name="android:elevation">30dp</item>
+    </style>
+
+
+    <style name="BaseCardView" parent="Base.CardView">
+        <item name="cardCornerRadius">20dp</item>
+    </style>
+
+    <style name="CardView.Workspace" parent="BaseCardView">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="cardElevation">0dp</item>
+        <item name="android:backgroundTint">@color/cardview_message_background</item>
+    </style>
+
+    <style name="CardView.Message" parent="BaseCardView">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="cardElevation">0dp</item>
+        <item name="android:backgroundTint">@color/cardview_message_background</item>
+    </style>
+
+    <style name="ShapeAppearence.RoundedRectangle" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">10dp</item>
+        <item name="cornerSizeTopRight">10dp</item>
+        <item name="cornerSizeBottomLeft">10dp</item>
+        <item name="cornerSizeBottomRight">10dp</item>
+        <item name="cornerRadius">10dp</item>
+    </style>
+
+    <style name="Appearance.WhiteRipple" parent="">
+        <item name="colorControlHighlight">@color/white</item>
+        <item name="android:background">?selectableItemBackground</item>
+    </style>
+
+
+    <style name="AlertDialog.TitleText" parent="MaterialAlertDialog.MaterialComponents.Title.Text">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AlertDialog.TitlePanel" parent="MaterialAlertDialog.MaterialComponents.Title.Panel">
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:paddingTop">?attr/dialogPreferredPadding</item>
+    </style>
+
+    <style name="AlertDialog.BodyText" parent="MaterialAlertDialog.MaterialComponents.Body.Text">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="AlertDialog.ButtonBar" parent="@style/Widget.AppCompat.ButtonBar.AlertDialog">
+        <item name="android:paddingTop">20dp</item>
+    </style>
+
+
+    <style name="AlertDialog.Theme" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="alertDialogStyle">@style/AlertDialog.Style</item>
+        <item name="buttonBarStyle">@style/AlertDialog.ButtonBar</item>
+        <item name="dialogPreferredPadding">20dp</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/AlertDialog.TitleText</item>
+        <item name="materialAlertDialogTitlePanelStyle">@style/AlertDialog.TitlePanel</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/AlertDialog.BodyText</item>
+    </style>
+
+    <style name="AlertDialog.Style" parent="MaterialAlertDialog.MaterialComponents">
+        <item name="shapeAppearance">@style/AlertDialog.ShapeAppearance</item>
+    </style>
+
+    <style name="AlertDialog.ShapeAppearance" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerSize">20dp</item>
+    </style>
+
+    <style name="AlertDialog.ButtonBar.Base" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="AppToolbar" parent="Widget.MaterialComponents.Toolbar.Primary">
+        <item name="titleTextAppearance">@style/AppToolbar.Title.Text</item>
+    </style>
+
+    <style name="AppToolbar.Channel" parent="Widget.MaterialComponents.Toolbar.Primary">
+        <item name="titleTextAppearance">@style/AppToolbar.Title.Text</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppToolbar.Title.Text" parent="">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:ellipsize">marquee</item>
+    </style>
+
+    <style name="AppToolbar.Title.Text.Big" parent="">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="TabLayout.Text" parent="">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+</resources>

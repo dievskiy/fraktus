@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="channel"
+            type="app.rootstock.data.channel.Channel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/channel_favourite_background"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingTop="@dimen/favourites_channel_padding"
+        android:paddingBottom="@dimen/favourites_channel_padding">
+
+        <ImageView
+            android:id="@+id/channel_color"
+            imageUrl="@{channel.imageUrl}"
+            placeholder="@{@drawable/circle_channel}"
+            android:layout_width="@dimen/basic_channel_size"
+            android:layout_height="@dimen/basic_channel_size"
+            android:layout_marginStart="@dimen/favourites_channel_padding"
+            android:paddingTop="@dimen/padding_4"
+            android:paddingBottom="@dimen/padding_4"
+            android:src="@drawable/circle_channel_favourite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/Text.Info.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="@dimen/padding_8"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/montserrat"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLines="2"
+            android:text="@{channel.name}"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:lineSpacingMultiplier="1.2"
+            app:layout_constraintBottom_toBottomOf="@id/channel_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/channel_color"
+            app:layout_constraintTop_toTopOf="@id/channel_color"
+            tools:text="shablon tamsd poasmd p masopdma sodmpasmaspdsap mdpasmaspo dmap ex msapdmasopt" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

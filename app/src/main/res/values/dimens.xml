@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="max_channel_name" format="integer" type="dimen">50</item>
+    <dimen name="dialog_channel_create_line_color_width">5dp</dimen>
+    <dimen name="dialog_bottom_padding">10dp</dimen>
+    <dimen name="dialog_top_padding">15dp</dimen>
+    <dimen name="message_input_max_height">120dp</dimen>
+    <dimen name="favourites_channel_padding">5dp</dimen>
+    <dimen name="basic_small_margin">8dp</dimen>
+    <dimen name="popup_elevation">10dp</dimen>
+    <dimen name="padding_16">16dp</dimen>
+    <dimen name="padding_24">24dp</dimen>
+    <dimen name="padding_8">8dp</dimen>
+    <dimen name="padding_32">32dp</dimen>
+    <dimen name="padding_top">20dp</dimen>
+    <dimen name="basic_channel_size">56dp</dimen>
+    <dimen name="padding_4">4dp</dimen>
+    <dimen name="workspace_radius">15dp</dimen>
+    <item name="max_workspace_name" format="integer" type="dimen">50</item>
+</resources>
