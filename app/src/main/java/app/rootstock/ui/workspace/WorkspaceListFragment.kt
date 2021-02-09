@@ -1,6 +1,5 @@
 package app.rootstock.ui.workspace
 
-import android.animation.ObjectAnimator
 import android.content.res.Resources
 import android.os.Bundle
 import android.view.LayoutInflater

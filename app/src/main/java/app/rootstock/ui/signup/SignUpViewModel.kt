@@ -66,7 +66,13 @@ class SignUpViewModel @ViewModelInject constructor(
                     }
                 }
                 is ResponseResult.Error -> {
-                    _signUpStatus.postValue(Event(EventUserSignUp.USER_EXISTS))
+                    userResponse.code?.let {
+                        when (it) {
+                            400 -> _signUpStatus.postValue(Event(EventUserSignUp.USER_EXISTS))
+                            422 -> _signUpStatus.postValue(Event(EventUserSignUp.INVALID_DATA))
+                            else -> _signUpStatus.postValue(Event(EventUserSignUp.INVALID_DATA))
+                        }
+                    } ?: _signUpStatus.postValue(Event(EventUserSignUp.INVALID_DATA))
                 }
             }
         }
@@ -90,7 +96,12 @@ class SignUpViewModel @ViewModelInject constructor(
                 }
             }
             is ResponseResult.Error -> {
-                _signUpStatus.postValue(Event(EventUserSignUp.FAILED))
+                token.code?.let {
+                    when (it) {
+                        400 -> _signUpStatus.postValue(Event(EventUserSignUp.INVALID_DATA))
+                        else -> _signUpStatus.postValue(Event(EventUserSignUp.INVALID_DATA))
+                    }
+                } ?: _signUpStatus.postValue(Event(EventUserSignUp.FAILED))
             }
         }
     }

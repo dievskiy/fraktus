@@ -10,14 +10,13 @@ import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.map
 
 
-
 sealed class ResponseResult<T> {
     data class Success<T>(val data: T) : ResponseResult<T>()
-    data class Error<T>(val message: String) : ResponseResult<T>()
+    data class Error<T>(val message: String, val code: Int?) : ResponseResult<T>()
 
     companion object {
         fun <T> success(data: T) = Success(data)
-        fun <T> error(message: String) = Error<T>(message)
+        fun <T> error(message: String, code: Int? = null) = Error<T>(message, code)
     }
 }
 

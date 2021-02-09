@@ -36,7 +36,7 @@ class AccountRepositoryImpl @Inject constructor(
 
         val state = when (tokenResponse.isSuccessful) {
             true -> ResponseResult.success(tokenResponse.body())
-            else -> ResponseResult.error(tokenResponse.message())
+            else -> ResponseResult.error(tokenResponse.message(), tokenResponse.code())
         }
         emit(state)
     }.catch {
@@ -49,7 +49,7 @@ class AccountRepositoryImpl @Inject constructor(
 
         val state = when (tokenResponse.isSuccessful) {
             true -> ResponseResult.success(tokenResponse.body())
-            else -> ResponseResult.error(tokenResponse.message())
+            else -> ResponseResult.error(tokenResponse.message(), tokenResponse.code())
         }
         emit(state)
     }.catch {
