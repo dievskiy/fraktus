@@ -51,6 +51,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/form_edit_text_white"
                 android:hint="@string/channel_name"
+                android:imeOptions="actionDone"
                 android:inputType="text"
                 android:maxLength="@dimen/max_channel_name"
                 android:maxLines="1"

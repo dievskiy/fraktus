@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDialogFragment
 import androidx.fragment.app.activityViewModels
@@ -115,6 +116,12 @@ class ChannelCreateDialogFragment : AppCompatDialogFragment() {
 
         if (showsDialog) {
             (requireDialog() as AlertDialog).setView(binding.root)
+        }
+        binding.channelEditNameText.setOnEditorActionListener { v, actionId, event ->
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
+                binding.channelEditNameText.clearFocus()
+            }
+            false
         }
         binding.save.setOnClickListener {
             wsId?.let { id -> viewModel.createChannel(id) }

@@ -48,6 +48,7 @@
                 android:id="@+id/workspace_edit_name_text"
                 style="@style/Text.EditText.Base"
                 android:layout_width="match_parent"
+                android:imeOptions="actionDone"
                 android:layout_height="wrap_content"
                 android:background="@drawable/form_edit_text_white"
                 android:hint="@string/workspace_name"

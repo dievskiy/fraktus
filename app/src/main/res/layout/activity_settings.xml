@@ -65,6 +65,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
+                    android:layout_marginStart="@dimen/padding_16"
+                    android:layout_marginEnd="@dimen/padding_16"
                     android:text="@{viewmodel.userData.email}"
                     android:textAlignment="center"
                     app:layout_constraintTop_toBottomOf="@id/imageView"

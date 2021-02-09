@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDialogFragment
 import androidx.fragment.app.activityViewModels
@@ -111,6 +112,12 @@ class WorkspaceCreateDialogFragment : AppCompatDialogFragment() {
         }
         binding.save.setOnClickListener { createWorkspace() }
         binding.cancel.setOnClickListener { dismiss() }
+        binding.workspaceEditNameText.setOnEditorActionListener { v, actionId, event ->
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
+                binding.workspaceEditNameText.clearFocus()
+            }
+            false
+        }
 
 
     }
