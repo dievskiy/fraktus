@@ -15,8 +15,8 @@ android {
         applicationId "app.rootstock"
         minSdkVersion 23
         targetSdkVersion 30
-        versionCode 2
-        versionName "1.01"
+        versionCode 4
+        versionName "1.04"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
