@@ -303,7 +303,7 @@ class WorkspaceViewModel @ViewModelInject constructor(
                 is ResponseResult.Success -> {
                     version ?: return@launch
                     remote.data ?: return@launch
-                    if (remote.data.version != version.version) {
+                    if (remote.data.version != version.version && version.version != 2) {
                         _eventWorkspace.value = Event(WorkspaceEvent.UpdateNeeded)
                     }
                 }

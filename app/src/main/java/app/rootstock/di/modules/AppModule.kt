@@ -37,8 +37,7 @@ class AppModule {
         const val URL_PRIVACY_POLICY = "https://fraktus.app/privacy-policy"
         const val SERVER_DATE_PATTERN = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS"
         const val SHARED_PREFS = "Fraktus"
-//        const val API_BASE_URL = "http://192.168.43.116:8000"
-        const val API_BASE_URL = "https://fraktus-ccmn54qy7q-nw.a.run.app"
+        const val API_BASE_URL = "https://api.fraktus.app"
     }
 
     @Singleton
