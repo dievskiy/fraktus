@@ -88,6 +88,23 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <TextView
+            android:id="@+id/forgot_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/padding_4"
+            android:clickable="true"
+            android:focusable="true"
+            android:singleLine="true"
+            android:text="@string/forgot_password"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/primary"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@+id/password"
+            app:layout_constraintStart_toStartOf="@+id/password"
+            app:layout_constraintTop_toBottomOf="@id/password" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/materialButton"
             style="@style/AppMaterialButton.Base"

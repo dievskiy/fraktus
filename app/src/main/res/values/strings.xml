@@ -66,4 +66,5 @@
     <string name="settings">settings</string>
     <string name="no_workspaces">you don’t have any\nworkspaces here yet</string>
     <string name="no_channels">you don’t have any\nchannels here yet</string>
+    <string name="forgot_password">Forgot password?</string>
 </resources>

@@ -3,6 +3,7 @@ package app.rootstock.ui.login
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.PorterDuff
+import android.net.Uri
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
@@ -17,6 +18,7 @@ import androidx.navigation.findNavController
 import app.rootstock.R
 import app.rootstock.data.user.UserWithPassword
 import app.rootstock.databinding.FragmentLoginBinding
+import app.rootstock.di.modules.AppModule
 import app.rootstock.ui.main.WorkspaceActivity
 import app.rootstock.utils.makeToast
 import dagger.hilt.android.AndroidEntryPoint
@@ -45,6 +47,13 @@ class LogInFragment : Fragment() {
         toolbar.setNavigationIcon(R.drawable.ic_baseline_arrow_back_24)
         toolbar.navigationIcon?.setTint(Color.WHITE)
         toolbar.setNavigationOnClickListener { view.findNavController().navigateUp() }
+
+        binding.forgotPassword.setOnClickListener { openForgotPasswordPage() }
+    }
+
+    private fun openForgotPasswordPage() {
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(FORGOT_PASSWORD_URL))
+        startActivity(intent)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -83,5 +92,9 @@ class LogInFragment : Fragment() {
         val intent = Intent(requireContext(), WorkspaceActivity::class.java)
         startActivity(intent)
         requireActivity().finishAfterTransition()
+    }
+
+    companion object {
+        const val FORGOT_PASSWORD_URL = "https://fraktus.app/restore-password"
     }
 }
